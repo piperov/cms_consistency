@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  finalizers:
+  - kubernetes.io/pvc-protection
+  name: cms-consistency-prod-report-pvc
+  namespace: ruciocm
+  resourceVersion: "52324"
+  selfLink: /api/v1/namespaces/default/persistentvolumeclaims/cms-consistency-prod-report-pvc
+  uid: 58965267-ada4-432b-b900-b5b095757d5c
+spec:
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: meyrin-cephfs
+  volumeMode: Filesystem
+  volumeName: pvc-58965267-ada4-432b-b900-b5b095757d5c
+status:
+  accessModes:
+  - ReadWriteMany
+  capacity:
+    storage: 11G
+  phase: Bound
